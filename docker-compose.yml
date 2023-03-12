@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+    volumes:
+      - .:/boxes-challenge
+    container_name: boxes-challenge-react-c
+    image: boxes-challenge-react-img
+    ports:
+      - 3000:3000
+    command: npm start
+    environment:
+      - WACTHPACK_POLLING=true
